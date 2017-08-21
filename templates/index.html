@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+    <style>
+    .error{ color:red; }
+    .header{
+      height: 40px;
+      width: 100px;
+      background-color: powderblue;
+     margin-left: 90px;
+     padding: 8px;
+    }
+
+    .submit{
+      color: #FFF;
+    background-color: #0095ff;
+    border-color: #07c;
+    box-shadow: inset 0 1px 0 #66bfff;
+    }
+
+    </style>
+    </head>
+
+    <body>
+        <h1 class="header">Signup</h1>
+
+        <form action="/" method="POST">
+            <table>
+
+                <tr><td align="right"><label for="un">Username</label>
+                    <td align="left"><input id="un" type="text" name="username" value='{{username}}' />
+
+                <p class="error">{{user_error}}</p><br><br></td></tr>
+
+                <tr><td align="right"><label for="pw">Password</label>
+                    <td align="left"><input id="pw" type="password" name="password" value='{{password}}' />
+
+                <p class="error">{{pass_error}}</p><br><br></td></tr>
+
+                <tr><td align="right"><label for="vpw">Verify Password</label>
+                    <td align="left"><input id="vpw" type="password" name="verify_password" value='{{verify_password}}' />
+
+                <p class="error">{{ver_pass_error}}</p><br><br></td></tr>
+
+                <tr><td align="right"><label for="em">Email (optional)</label>
+                    <td align="left"><input id="em" type="text" name="email" value='{{email}}' />
+
+                <p class="error">{{email_error}}</p><br><br></td></tr>
+
+                <tr><td><input class="submit" type="submit" /></td></tr>
+
+            </table>
+        </form>
+
+    </body>
+</html>
